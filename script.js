@@ -1,16 +1,31 @@
     let computerScore = 0;
     let playerScore = 0;
-    let playerSelection = playerChoice();
-    let computerSelection = computerPlay();
+    let playerSelection;
+    let computerSelection;
+    let roundResult;
+
+    game();
     
     function game (){
 
         for(let i = 1; i<=5;i++){
-            computerPlay();
-            playerChoice();
-            playRound(playerSelection, computerSelection);
+            playerSelection = playerChoice();
+            computerSelection = computerPlay();
+            roundResult = playRound(playerSelection, computerSelection);
+            console.log(`Round: ${i} Computer: ${computerSelection}  Player: ${playerSelection} Round result: ${roundResult}`);
+
         }
+        score(playerScore, computerScore);
         
+    }
+
+    function score(playerScore, computerScore){
+
+        (playerScore>computerScore)? console.log(`You won the game \nPLAYER: ${playerScore} COMPUTER: ${computerScore}`) :
+        (playerScore<computerScore)? console.log(`You lost the game \nPLAYER: ${playerScore} COMPUTER: ${computerScore}`) : 
+        console.log(`It's a tie \nPLAYER: ${playerScore} COMPUTER: ${computerScore}`);
+
+
     }
     
 
@@ -22,17 +37,37 @@
         switch(playerSelection){
             case "rock":
                 if(computerSelection==="rock") roundResult = "It's a tie";
-                if(computerSelection==="paper") roundResult = "You lost";
-                if(computerSelection==="scissors") roundResult = "You win";
+                if(computerSelection==="paper") {
+                    roundResult = "You lost";
+                    computerScore++;
+
+                }
+                if(computerSelection==="scissors"){
+                     roundResult = "You win";
+                     playerScore++;
+                }
                 break;
+
             case "paper":
-                if(computerSelection==="rock") roundResult = "You win";
+                if(computerSelection==="rock") {
+                     roundResult = "You win";
+                     playerScore++;
+                }
                 if(computerSelection==="paper") roundResult = "It's a tie";
-                if(computerSelection==="scissors") roundResult = "You lost";
+                if(computerSelection==="scissors"){ 
+                    roundResult = "You lost";
+                    computerScore++;
+                }
                 break;
             case "scissors":
-                if(computerSelection==="rock") roundResult = "You lost";
-                if(computerSelection==="paper") roundResult = "You win";
+                if(computerSelection==="rock") {
+                     roundResult = "You lost";
+                     computerScore++;
+                }
+                if(computerSelection==="paper"){
+                     roundResult = "You win";
+                     playerScore++;
+                }
                 if(computerSelection==="scissors") roundResult = "It's a tie";
                 break;
  
