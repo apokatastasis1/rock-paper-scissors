@@ -12,14 +12,25 @@
     }
   
     function playerChoice(){
-        choice = prompt("Choose rock, paper or scissors.")
-        return choice;
+
+    let choice;  
+
+    do{
+
+        choice = prompt("Choose rock, paper or scissors.").toLowerCase();
+
+        if(choice !== "paper" && choice !== "rock" && choice !== "scissors") alert("Please enter a valid option.");
+
+    }while(choice !== "paper" && choice !== "rock" && choice !== "scissors");
+
+    return choice;
+
 
     }
 
     let playerSelection = playerChoice();
     let computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
+    //console.log(playRound(playerSelection, computerSelection));
 
   
 
