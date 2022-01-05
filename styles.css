@@ -407,7 +407,9 @@ div {
         row-gap: 30vh;
     }
 */
-    .weapons img {
+    .rock,
+    .paper,
+    .scissors {
         width: 3vh;
         height: auto;
       }
