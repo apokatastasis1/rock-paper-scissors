@@ -397,6 +397,18 @@ div {
     .game-name {
       font-size: 100px;
     }
+    .user-avatar,
+    .computer-avatar{
+        width: 60%;
+        height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+    .weapons img {
+      width: 6vh;
+      height: auto;
+    }
   }
 
 
