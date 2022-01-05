@@ -397,11 +397,14 @@ div {
     .game-name {
       font-size: 100px;
     }
+    /*
     .user-avatar,
     .computer-avatar{
         width: 80%;
         height: auto;
     }
+    */
+
  /*
     .center{
         row-gap: 30vh;
