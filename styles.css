@@ -399,8 +399,12 @@ div {
     }
     .user-avatar,
     .computer-avatar{
-        width: 60%;
+        width: 80%;
         height: auto;
+    }
+
+    .center{
+        row-gap: 30vh;
     }
   }
 
