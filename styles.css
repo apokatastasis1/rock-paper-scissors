@@ -410,7 +410,7 @@ div {
     .rock,
     .paper,
     .scissors {
-        width: 3vh;
+        width: 2vh;
         height: auto;
       }
   }
