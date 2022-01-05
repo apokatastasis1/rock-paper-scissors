@@ -402,20 +402,23 @@ div {
         width: 80%;
         height: auto;
     }
-
+ /*
     .center{
         row-gap: 30vh;
     }
-  }
-
-  @media only screen and (max-width: 330px) {
+*/
     .weapons img {
-      width: 6vh;
-      height: auto;
-    }
+        width: 6vh;
+        height: auto;
+      }
   }
 
+/*
+  @media only screen and (max-width: 330px) {
+    
+  }
 
+*/
 
   
   
