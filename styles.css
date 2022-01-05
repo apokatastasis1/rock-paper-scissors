@@ -78,7 +78,7 @@ body{
 
 .weapons img{
     
-    width: 6vh;
+    width: 8vh;
     height: auto;
     padding: 2%;
     
@@ -403,13 +403,13 @@ div {
         width: 80%;
         height: auto;
     }
-    
-
- /*
-    .center{
-        row-gap: 30vh;
+    .weapons img{
+        width: 6vh;
+        height: auto;
+        padding: 2%;
     }
-*/
+
+
     
   }
 
