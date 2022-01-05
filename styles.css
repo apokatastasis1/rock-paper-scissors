@@ -1,0 +1,409 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+
+.game,
+body{
+    
+    margin: 0;
+    font-family: 'VT323', monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: black;
+    
+    
+    
+}
+
+
+
+.title{
+    background-color: black;
+}
+
+.round-result{
+    
+    font-size: 5vh;
+    
+}
+.board-message{
+    font-size: 3.5vh;
+    
+}
+.board-container{
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.weapons{
+    display: flex; 
+    height: 25vh; 
+   
+    gap: 5.5vw;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.battle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.user-choice ,
+.computer-choice {
+    width: 8vh;
+    height: auto;
+    padding: 2%;
+    border: 0.4vw solid;
+    border-radius: .5rem;
+    border-color: #46c926;
+
+    
+    
+    
+    
+    color: white;
+    background: white;
+    
+}
+
+.weapons img{
+    
+    width: 8vh;
+    height: auto;
+    padding: 2%;
+    
+    
+
+    
+}
+.vs{
+    font-size: 5vh;
+    padding: 5%;
+    
+}
+
+
+
+.container{
+    display: flex;
+    
+    flex: 1;
+    
+}
+
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    justify-content: center;
+    row-gap: 15vh;
+    
+    
+}
+
+
+.left-side,
+.right-side{
+    display: flex;
+    width: 20vw;
+    flex: 1;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 4% 0;
+    row-gap: 4%;
+    
+    
+    
+    
+}
+
+.score-user,
+.score-computer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 8%;
+    margin-bottom: -50%;
+    font-size: 15vh;
+    border: green 2px solid;
+    
+    
+    
+
+}
+
+
+.user-avatar,
+.computer-avatar{
+    width: 35%;
+    height: auto;
+}
+
+div {
+    text-align: center;
+    font-size: 48px;
+
+    
+}
+
+.rock,
+.paper,
+.scissors{
+     
+
+    border-radius: .5rem;
+
+    
+    transition: all .07s ease;
+    
+    
+    
+    background: white;
+    
+    
+
+}
+
+
+.rock:hover,
+.paper:hover,
+.scissors:hover{
+    transform: scale(1.1);
+   
+    background: #1ee71e;
+    
+    
+    box-shadow: inset 0px 0px 25px 10px rgb(4, 104, 4) ;
+        
+    
+}
+
+
+/*modal*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+    
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 5px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  
+  .replay-btn{
+
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;  
+    margin-bottom: 5vh;
+    font-family: sans-serif;
+    box-shadow: 2px 1px 2px gray;
+    
+
+      
+  }
+  .replay-btn:hover{
+    box-shadow: inset 0px 0px 3px #c1c1c1;
+  }
+
+  .replay-btn:active{
+    
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+     box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
+     
+         
+      
+  }
+  .game,
+  .apokatastasis{
+      display: none;
+      
+  }
+  
+
+  .apokatastasis{
+      
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      gap: 20px;
+      
+  }
+  
+
+  .intro{
+      display: flex;
+      
+      flex: 1;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      
+      
+      
+      
+      
+  }
+  .game-name{
+      position: absolute;
+      font-size: 120px;
+      
+  }
+
+  .rock-text{
+      top: 0;
+      margin-top: 5vh;
+      
+    animation: slideIn 1s;
+    
+  }
+
+  .paper-text{
+      margin-top: -35vh;
+      animation: slideInPaper 1s;
+  }
+  .scissors-text{
+      align-self: flex-end;
+      margin-bottom: 40vh;
+      animation: dropdown 1s;
+
+  }
+  
+
+  #start-button{
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 20vh;
+      padding: 20px 40px;
+      border-radius: 5px;
+      background: green;
+      border-color: #46c926;
+      font-size: 20px;
+      color: white;
+      animation: .7s shrinkjump 0.6s ease-in-out;
+      transform-origin: bottom center;
+  }
+  #start-button:hover{
+      cursor: pointer;
+       
+  }
+  
+  @keyframes slideIn{
+      from{transform: translateX(100vw);}
+      to{transform: translateX(80);}
+  }
+  @keyframes slideInPaper{
+    from{transform: translateX(-100vw);}
+    to{transform: translateX(50);}
+  }
+  @keyframes dropdown{
+      from{transform: translateY(-100vh);}
+      to{transform: translateY(0);}
+  }
+
+  @keyframes shrinkjump {
+    10%, 15% {
+      transform: scale(1, .2) translate(0, 0);
+    }
+    
+    45%, 50% {
+      transform: scale(1) translate(0, -30px);
+    }
+    
+    80% {
+      transform: scale(1) translate(0, 0) ;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .game-name {
+      font-size: 100px;
+    }
+  }
+
+
+
+  
+  
+
+
+
+  

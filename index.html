@@ -4,13 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+
+    
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    
+    <audio id="click-sound" src="./sounds/ES_Mouse Click - SFX Producer.mp3"></audio>
+    <audio id="replay-sound" src="./sounds/ES_Arcade Game Button 3 - SFX Producer.mp3"></audio>
+
+    <div class="intro">
+        <div class="game-name rock-text">Rock</div>
+        <div class="game-name paper-text">Paper</div>
+        <div class="game-name scissors-text">Scissors</div>
+        <button id="start-button">Start</button>
+    </div>
+    <div class="game">
+        <div class="title">Rock Paper Scissors</div>
+        <div class="board-container">
+            <div class="round-result">Choose your Weapon!</div>
+            <div class="board-message">First to score 5 points wins!</div>
+        </div>
+        <div class="container">
+            
+            <div class="left-side">
+                <div>YOU</div>
+                <img class="user-avatar" src="./img/userAvatar.png">
+                <div class="score-user">0</div>
+            </div>
+            <div class="center">
+                <div class="battle">
+                    <img class="user-choice" id="user-choice" src="./img/question-mark.png">
+                    <div class="vs">VS</div>
+                    <img class="computer-choice" src="./img/question-mark.png"> 
+                </div>
+
+                <div class="weapons">
+                    <img class="rock" src="./img/rock.png">
+                    <img class="paper" src="./img/paper.png">
+                    <img class="scissors" src="./img/scissors.png">
+                </div>
+            </div>
+            <div class="right-side">
+                <div>COM</div>
+                <img class="computer-avatar" src="./img/computer.png">
+                <div class="score-computer">0</div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+
+            
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4 class="modal-result"></h2>
+                <button class="replay-btn">Play again</button>
+              </div>
+            </div>
+          
+          </div>
+    </div>
+    <div class="apokatastasis">
+        <h4>by</p>
+        <h3>Apokatastasis1</p>
+    </div>
 
 
-
-    <script src="./script.js"></script>
 </body>
 </html>
